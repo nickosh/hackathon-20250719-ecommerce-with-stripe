@@ -4,7 +4,7 @@
 
 > United by code, powered by ramen.
 
--👨‍💻 Nick – Backend & Infrastructure
--👩‍💻 Amra – Full Stack Engineering
--👩‍🔬 Meg – QA Automation & Testing Strategy
--🎨 Robbin – Full Stack Engineering
+- 👨‍💻 Nick – Backend & Infrastructure
+- 👩‍💻 Amra – Full Stack Engineering
+- 👩‍🔬 Meg – QA Automation & Testing Strategy
+- 🎨 Robbin – Full Stack Engineering
