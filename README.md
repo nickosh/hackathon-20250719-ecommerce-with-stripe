@@ -1,8 +1,10 @@
-# Tokyo Hackathon - AI w/QA
+# 🧠 Tokyo Hackathon 2024 – AI w/QA
 
-## Team - Ramen
+## 👥 Team Ramen 🍜
 
-- Nick
-- Amra
-- Meg
-- Robbin
+> United by code, powered by ramen.
+
+-👨‍💻 Nick – Backend & Infrastructure
+-👩‍💻 Amra – Full Stack Engineering
+-👩‍🔬 Meg – QA Automation & Testing Strategy
+-🎨 Robbin – UI/UX & Frontend Magic
