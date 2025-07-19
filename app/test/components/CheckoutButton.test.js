@@ -1,4 +1,4 @@
-let mockRedirectToCheckout // ← just a declaration, no initial value
+let mockRedirectToCheckout
 
 jest.mock("@stripe/stripe-js", () => {
   const fn = jest.fn() // create the spy
@@ -9,7 +9,6 @@ jest.mock("@stripe/stripe-js", () => {
   }
 })
 
-/* ---------- 3.  Mock use-shopping-cart ---------- */
 const mockCart = {
   cartCount: 1,
   cartDetails: {
@@ -26,7 +25,6 @@ jest.mock("use-shopping-cart", () => ({
   useShoppingCart: () => mockCart,
 }))
 
-/* ---------- 4.  Mock global fetch BEFORE component import ---------- */
 global.fetch = jest.fn(() =>
   Promise.resolve({
     ok: true,
@@ -34,12 +32,10 @@ global.fetch = jest.fn(() =>
   })
 )
 
-/* ---------- 5.  NOW import React / RTL / component ---------- */
 import React from "react"
 import { render, screen, fireEvent, waitFor } from "@testing-library/react"
 import CheckoutButton from "../../components/CheckoutButton"
 
-/* ---------- 6.  Tests ---------- */
 describe("CheckoutButton", () => {
   beforeEach(() => jest.clearAllMocks())
 

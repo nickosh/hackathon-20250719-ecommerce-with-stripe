@@ -2,7 +2,6 @@ import React from "react"
 import { render, screen } from "@testing-library/react"
 import ShoppingCart from "../../components/ShoppingCart"
 
-// ⛔️ DON'T redefine mocks inside test blocks. Define one version for each scenario.
 const mockUseShoppingCartDefault = {
   shouldDisplayCart: true,
   cartCount: 1,
@@ -37,7 +36,6 @@ const mockUseShoppingCartHidden = {
   },
 }
 
-// ✅ Mock CartItem and CheckoutButton to keep this test focused
 jest.mock("../../components/CartItem", () => ({ item }) => (
   <div data-testid="cart-item">{item.name}</div>
 ))

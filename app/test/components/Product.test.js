@@ -41,7 +41,6 @@ describe("Product component", () => {
 
     const incrementButton = screen.getByText("+")
     const decrementButton = screen.getByText("-")
-    const quantityText = screen.getByText("1")
 
     // Increase
     fireEvent.click(incrementButton)
@@ -62,7 +61,6 @@ describe("Product component", () => {
     const incrementButton = screen.getByText("+")
     const addToCartButton = screen.getByText("Add to cart")
 
-    // Increment to 3
     fireEvent.click(incrementButton)
     fireEvent.click(incrementButton)
 
@@ -70,7 +68,6 @@ describe("Product component", () => {
 
     expect(mockAddItem).toHaveBeenCalledWith(mockProduct, { count: 3 })
 
-    // After adding, quantity should reset to 1
     expect(screen.getByText("1")).toBeInTheDocument()
   })
 })

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react"
 import CartItem from "../../components/CartItem"
-import { CartProvider, useShoppingCart } from "use-shopping-cart"
+import { CartProvider } from "use-shopping-cart"
 import { act } from "react-dom/test-utils"
 import React from "react"
 

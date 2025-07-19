@@ -1,8 +1,6 @@
-// ✅ Mocks first (Next.js modules + cart logic)
 jest.mock("next/image", () => ({
   __esModule: true,
   default: (props) => {
-    // Simulate <img> for testing
     return <img {...props} />
   },
 }))
@@ -20,7 +18,6 @@ jest.mock("use-shopping-cart", () => ({
   }),
 }))
 
-// ✅ Imports
 import React from "react"
 import { render, screen, fireEvent } from "@testing-library/react"
 import NavBar from "../../components/NavBar"
