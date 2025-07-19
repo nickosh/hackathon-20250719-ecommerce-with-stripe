@@ -1,9 +1,9 @@
 [project]
-name = "template-qa-python"
+name = "AI Hackathon 2025"
 version = "0.1.0"
 description = "Add your description here"
 authors = [
-    { name = "Nikolai Shishov", email = "nikolay.shishov@gmail.com" }
+    { name = "RAMEN team" }
 ]
 dependencies = [
     "pytest-playwright>=0.5.1",
