@@ -10,9 +10,12 @@
 **QA Engineer:** Senior SDET with 20+ years experience  
 **Technology Stack:** Next.js, React, Stripe, Playwright, Python  
 
-### Key Findings:
+### Key Findings (Updated after Live Application Analysis):
 - ✅ Well-structured Next.js application with clear component separation
-- ⚠️ **Critical Issues Found:** Currency typos, insufficient test coverage
+- ✅ **Live Application Verified**: All 8 products working correctly with JPY pricing
+- ✅ **Stripe Integration Confirmed**: Full checkout flow operational with Japan geo-restriction
+- ✅ **Cart Functionality Validated**: Real-time updates, persistence, and calculations working
+- ⚠️ **Critical Issues Found**: Currency typos in source code, insufficient test coverage
 - ❌ Missing comprehensive test suite for core e-commerce functionality
 - ✅ Good foundation with Playwright testing framework setup
 
@@ -154,23 +157,33 @@ Feature: Payment Processing
 
 ### High Severity Defects
 
-1. **DEF-001: Data Corruption in Product Catalog**
+1. **DEF-001: Data Corruption in Product Catalog (STILL CRITICAL)**
    - **Location:** `app/data/products.js`
    - **Issue:** Currency field typos ("YPY" instead of "JPY", missing 'c')
    - **Impact:** Payment processing failures, incorrect pricing display
    - **Priority:** P1 - Critical
+   - **Live Status:** App works despite typos (Stripe uses price_id), but data integrity issue remains
 
-2. **DEF-002: Currency Display Inconsistency**
+2. **DEF-002: Currency Display Inconsistency (VERIFIED)**
    - **Location:** `app/components/CheckoutButton.js`
    - **Issue:** Error message shows GBP (£) instead of JPY (¥)
    - **Impact:** User confusion, incorrect business rules
    - **Priority:** P1 - Critical
+   - **Live Status:** Needs verification with minimum order testing
 
-3. **DEF-003: Missing Test Implementation**
+3. **DEF-003: Missing Test Implementation (CONFIRMED)**
    - **Location:** `test/tests/ui/test_example.py`
    - **Issue:** Placeholder tests not updated for actual application
    - **Impact:** No quality assurance coverage
    - **Priority:** P1 - Critical
+   - **Live Status:** Confirmed - tests do not match live application functionality
+
+4. **DEF-004: Business Rule Validation Gaps (NEW - IDENTIFIED FROM LIVE)**
+   - **Location:** Various components
+   - **Issue:** Minimum order (¥30) and maximum items (20) validation needs verification
+   - **Impact:** Potential business rule bypass
+   - **Priority:** P1 - Critical
+   - **Live Status:** All products are above ¥30, boundary testing needed
 
 ### Medium Severity Issues
 
