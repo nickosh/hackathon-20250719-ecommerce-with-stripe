@@ -1,5 +1,6 @@
-import Product from "@/components/Product";
-import { products } from "@/data/products";
+import Product from "@/components/Product"
+import { products } from "@/data/products"
+import React from "react"
 
 export default function Home() {
   return (
@@ -8,5 +9,5 @@ export default function Home() {
         <Product product={product} key={product.product_id} />
       ))}
     </div>
-  );
+  )
 }
