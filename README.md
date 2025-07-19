@@ -1,4 +1,4 @@
-# 🧠 Tokyo Hackathon 2024 – AI w/QA
+# 🧠 Tokyo Hackathon 2025 – AI w/QA
 
 ## 👥 Team Ramen 🍜
 
