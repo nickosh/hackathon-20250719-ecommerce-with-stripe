@@ -7,4 +7,4 @@
 -👨‍💻 Nick – Backend & Infrastructure
 -👩‍💻 Amra – Full Stack Engineering
 -👩‍🔬 Meg – QA Automation & Testing Strategy
--🎨 Robbin – UI/UX & Frontend Magic
+-🎨 Robbin – Full Stack Engineering
