@@ -1,19 +1,20 @@
-import { useShoppingCart } from "use-shopping-cart";
-import CartItem from "./CartItem";
-import CheckoutButton from "./CheckoutButton";
+import { useShoppingCart } from "use-shopping-cart"
+import CartItem from "./CartItem"
+import CheckoutButton from "./CheckoutButton"
+import React from "react"
 
 export default function ShoppingCart() {
-  const { shouldDisplayCart, cartCount, cartDetails } = useShoppingCart();
+  const { shouldDisplayCart, cartCount, cartDetails } = useShoppingCart()
 
-    const totalPrice = Object.values(cartDetails ?? {}).reduce(
+  const totalPrice = Object.values(cartDetails ?? {}).reduce(
     (total, item) => total + item.price * item.quantity,
     0
-    );
+  )
 
-    const totalQuantity = Object.values(cartDetails ?? {}).reduce(
+  const totalQuantity = Object.values(cartDetails ?? {}).reduce(
     (total, item) => total + item.quantity,
     0
-    );
+  )
 
   return (
     <div
@@ -27,12 +28,14 @@ export default function ShoppingCart() {
             <CartItem key={entry.id} item={entry} />
           ))}
           <hr className="my-4 border-gray-300" />
-          <div className="text-right font-bold text-xl md:text-2xl">Total: ￥{totalPrice}({totalQuantity})</div>
+          <div className="text-right font-bold text-xl md:text-2xl">
+            Total: ￥{totalPrice}({totalQuantity})
+          </div>
           <CheckoutButton />
         </>
       ) : (
         <div className="p-5">You have no items in your cart</div>
       )}
     </div>
-  );
+  )
 }
